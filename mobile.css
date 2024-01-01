@@ -1,0 +1,161 @@
+body {
+    margin: 0%;
+    background-color: #000000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32pt;
+}
+.topbar {
+    width: 100%;
+    height:5%;
+    background-color: #303030;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+}
+.tagline {
+    left: 70px;
+    top: -40%;
+    position: absolute;
+    color: white;
+    font-size: 30pt;
+}
+.logo {
+    left: 15px;
+    top: 15px;
+    width:50px;
+    position: absolute;
+}
+.topbar a,.topbar a:hover, .topbar a:visited, .topbar a:active, .topbar a:link {
+    color: inherit;
+    text-decoration: none;
+}
+.bottom {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    height: 95%;
+}
+.post {
+    width: 100%;
+    height: 50%;
+    background-color: #101010;
+    left: 0%;
+    color: white;
+    position: absolute;
+    top: 5%;
+    margin: 0%;
+    padding: 0%;
+    border-radius: 10px;
+}
+.post .title {
+    left: 5px;
+    top: 0%;
+    position: absolute;
+}
+.post .postdata {
+    top: 15%;
+    left: 5px;
+    position: absolute;
+}
+.post .content {
+    top: 25%;
+    left: 5px;
+    position: absolute;
+}
+.post .postdata a {
+    text-decoration: none;
+    color: inherit;
+}
+.communityPage {
+    width:100%;
+    height: 100%;
+    background-color: #000000;
+    left:0%; 
+    top:0%; 
+    position: absolute;  
+}
+.communityPage .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: absolute;
+}
+.communityPage .banner img {
+    width:100%;
+    position: absolute;
+}
+.communityPage .titlebar {
+    top: 200px;
+    width: 100%;
+    height: 20%;
+    background-color: #101010;
+    z-index: 2;
+    position: absolute;
+}
+.communityPage .titlebar img {
+    position: absolute;
+    height: 70%;
+    top: 15%;
+    width: auto;
+    object-fit: cover;
+    outline-style: solid;
+    outline-color: #202020;
+    outline-width: 5px;
+    border-radius: 100%;
+    background-color: white;
+    left: 1%;
+}
+.communityPage .titlebar h1 {
+    position: absolute;
+    color: white;
+    font-size: 40pt;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.closeButton {
+    position: fixed;
+    left:50px;
+    top: 100px;
+    height:70px;
+    width: 70px;
+    font-size: 20pt;
+}
+.userPage {
+    width:100%;
+    height: 100%;
+    background-color: #000000;
+    left:0%; 
+    top:0%; 
+    position: absolute;  
+}
+.userPage .titlebar {
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: #202020;
+    z-index: 2;
+    position: absolute;
+}
+.userPage .titlebar img {
+    position: absolute;
+    height: 70%;
+    top: 15%;
+    width: auto;
+    object-fit: cover;
+    outline-style: solid;
+    outline-color: #202020;
+    outline-width: 5px;
+    border-radius: 100%;
+    background-color: white;
+    left: 5%;
+}
+.userPage .titlebar h1 {
+    position: absolute;
+    color: white;
+}
