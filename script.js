@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var chance = Math.floor(Math.random()*10);
         if (chance==1) {
             var logo = document.getElementById("logo");
-            logo.src = "http://82.16.42.25/r/images/rLogoTest.png";
+            logo.src = "https://82.16.42.25/r/images/rLogoTest.png";
             logo.className = "logo";
             logo.style = "border-radius: 1000px; outline: rgb(32, 32, 32) solid 4px; top: 20%; height: 70%; width: auto;";
         }
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function renewCookie() {
-        document.cookie = "privbetaparticipant=true; expires=" + d.toUTCString() + ";path=http://82.16.42.25/r/";
+        document.cookie = "privbetaparticipant=true; expires=" + d.toUTCString() + ";path=/";
     }
 
     function updateUI() {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         closeButton.innerHTML = "<";
         // wait(1000);
         var http = new XMLHttpRequest();
-        http.open("GET", "http://82.16.42.25/r/api/v1/viewuser.php?user=" + correctUser, false);
+        http.open("GET", "https://82.16.42.25/r/api/v1/viewuser.php?user=" + correctUser, false);
         http.send(null);
         setTimeout(() => updateUserPage(), 100)
         function updateUserPage() {
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var http = new XMLHttpRequest();
                 var postid = userPosts[i];
                 console.log("Finding post: " + postid);
-                http.open("GET", "http://82.16.42.25/r/api/v1/retrievepost.php?post=" + postid, false);
+                http.open("GET", "https://82.16.42.25/r/api/v1/retrievepost.php?post=" + postid, false);
                 setTimeout(() => http.send(null), 100)
                 console.log(http.response);
                 var postContent = JSON.parse(http.responseText);
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
         communityUI.className = "communityPage";
         bottom.appendChild(communityUI);
         var http = new XMLHttpRequest();
-        http.open("GET", "http://82.16.42.25/r/api/v1/viewCommunity.php?community=" + communityName, false);
+        http.open("GET", "https://82.16.42.25/r/api/v1/viewCommunity.php?community=" + communityName, false);
         http.send(null);
         var communityContent = JSON.parse(http.responseText);
         var banner = document.createElement("div");
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var http = new XMLHttpRequest();
         var postid = Math.floor(Math.random() * 10000);
         console.log("Finding post: " + postid);
-        http.open("GET", "http://82.16.42.25/r/api/v1/retrievepost.php?post=" + postid, false);
+        http.open("GET", "https://82.16.42.25/r/api/v1/retrievepost.php?post=" + postid, false);
         http.send(null);
         console.log(http.response);
         var postContent = JSON.parse(http.responseText);
