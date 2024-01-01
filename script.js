@@ -262,20 +262,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function init() {
         var time = (new Date()).getTime()
         console.log(time);
-        if (document.cookie.match("privbetaparticipant=true")) {
-            updateUI();
-            findNewPost();
-            renewCookie();
-            newLogo();
-        } else if (time > 1703894400000) {
-            var accdenied = document.createElement("meta");
-            accdenied.content = "0, 'http://82.16.42.25/r/'";
-            accdenied.httpEquiv = "refresh";
-            document.head.appendChild(accdenied);
-        } else {
-            renewCookie();
-            refreshPage();
-        }
+        updateUI();
+        findNewPost();
+        renewCookie();
+        newLogo();
     }
 
     init()
