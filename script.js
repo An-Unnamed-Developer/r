@@ -225,10 +225,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var http = new XMLHttpRequest();
         var postid = Math.floor(Math.random() * 10000);
         console.log("Finding post: " + postid);
-        http.open("GET", "https://chfd-04-b2-v4wan-168027-cust24.vm15.cable.virginm.net/r/api/v1/retrievepost.php?post=" + postid, false);
+        http.open("GET", "https://rcommunity.uk.to/api/v1/getPost.sjs?id=" + postid, false);
         http.send(null);
         console.log(http.response);
-        var postContent = JSON.parse(http.responseText);
+        var postContent = JSON.parse(http.responseText)[0];
         var newPost = document.createElement("div");
         bottom.appendChild(newPost);
         newPost.id = "post" + postid;
