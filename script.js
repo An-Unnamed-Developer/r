@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function findNewPost() {
         document.getElementById("logo").style.animation="rotation";
         var http = new XMLHttpRequest();
-        var postid = Math.floor(Math.random() * 10000);
+        var postid = Math.floor(Math.random() * 5);
         console.log("Finding post: " + postid);
         http.open("GET", "https://rcommunity.uk.to/api/v1/getPost.sjs?id=" + postid, false);
         http.send(null);
