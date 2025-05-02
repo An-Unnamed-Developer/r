@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
             loadingDiv.style.opacity = opacity;
             console.log(i, opacity)
         }
-        element.outerHTML = "";
     }
 
     function clearLoadingArtefacts() {
