@@ -160,10 +160,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 newPostData.innerHTML = "<a href=\"\" onclick=\"event.preventDefault();\" id=\""+i+"-"+index+"-ulink-" + postContent["author"] + "\">" + postContent["author"] + "</a>" + " - <a href=\"\" onclick=\"event.preventDefault();\" id=\""+i+"-"+index+"-clink-" + postContent["community"] + "\">r/" + postContent["community"] + "</a>";
                 newPostContent.innerHTML = postContent["content"];
                 document.getElementById(+i+"-"+index+"-clink-" + postContent["community"]).addEventListener('click', function () {
-                    viewCommunity(postContent.community);
+                    viewCommunity(postContent["community"]);
                 });
                 document.getElementById(i+"-"+index+"-ulink-" + postContent["author"]).addEventListener('click', function () {
-                    viewUser(postContent.author);
+                    viewUser(postContent["author"]);
                 }
             );
             uPos += 55;
@@ -247,13 +247,13 @@ document.addEventListener('DOMContentLoaded', function () {
         newPost.appendChild(newPostContent);
         newPostContent.innerHTML = "Loading...";
         newPostTitle.innerHTML = postContent.title;
-        newPostData.innerHTML = "<a href=\"\" onclick=\"event.preventDefault();\" id=\"ulink-" + postContent.author + "\">" + postContent.author + "</a>" + " - <a href=\"\" onclick=\"event.preventDefault();\" id=\"clink-" + postContent.community + "\">r/" + postContent.community + "</a>";
+        newPostData.innerHTML = "<a href=\"\" onclick=\"event.preventDefault();\" id=\"ulink-" + postContent["author"] + "\">" + postContent["author"] + "</a>" + " - <a href=\"\" onclick=\"event.preventDefault();\" id=\"clink-" + postContent["community"] + "\">r/" + postContent["community"] + "</a>";
         newPostContent.innerHTML = postContent.content;
-        document.getElementById("clink-" + postContent.community).addEventListener('click', function () {
-            viewCommunity(postContent.community);
+        document.getElementById("clink-" + postContent["community"]).addEventListener('click', function () {
+            viewCommunity(postContent["community"]);
         });
-        document.getElementById("ulink-" + postContent.author).addEventListener('click', function () {
-            viewUser(postContent.author);
+        document.getElementById("ulink-" + postContent["author"]).addEventListener('click', function () {
+            viewUser(postContent["author"]);
         });
         pos += 55;
         document.getElementById("logo").style.animation="";
