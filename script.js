@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             stylesheet.rel = "stylesheet";
             stylesheet.href = "mobile.css";
             stylesheet.addEventListener('load', function () {
-                fadeOut(loadingDiv);
+                // fadeOut(loadingDiv);
                 clearLoadingArtefacts();
             })
         } else {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
             stylesheet.rel = "stylesheet";
             stylesheet.href = "style.css";
             stylesheet.addEventListener('load', function () {
-                fadeOut(loadingDiv);
+                // fadeOut(loadingDiv);
                 clearLoadingArtefacts();
             })
         }
