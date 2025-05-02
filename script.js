@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newPostContent.className = "content";
         newPost.appendChild(newPostContent);
         newPostContent.innerHTML = "Loading...";
-        newPostTitle.innerHTML = postContent.title;
+        newPostTitle.innerHTML = postContent["title"];
         newPostData.innerHTML = "<a href=\"\" onclick=\"event.preventDefault();\" id=\"ulink-" + postContent["author"] + "\">" + postContent["author"] + "</a>" + " - <a href=\"\" onclick=\"event.preventDefault();\" id=\"clink-" + postContent["community"] + "\">r/" + postContent["community"] + "</a>";
         newPostContent.innerHTML = postContent.content;
         document.getElementById("clink-" + postContent["community"]).addEventListener('click', function () {
