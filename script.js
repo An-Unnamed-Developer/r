@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
         http.open("GET", "https://r.logangamesdaily.nl/api/v1/getPost.sjs?id=" + postid, false);
         http.send(null);
         console.log(http.response);
-        var postContent = JSON.parse(http.responseText)[0];
+        var postContent = JSON.parse(http.responseText);
         var newPost = document.createElement("div");
         bottom.appendChild(newPost);
         newPost.id = "post" + postid;
