@@ -52,7 +52,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function clearLoadingArtefacts() {
-        document.getElementById("loadingDiv").outerHTML = "";
+        // document.getElementById("loadingDiv").outerHTML = "";
+        let status = document.createElement("p")
+        status.innerText = "Redirecting you to the new, more secure and better R..."
+        document.getElementById("loadingDiv").appendChild(status)
+
+        setTimeout(function() {
+            window.location.href = "https://r.logangamesdaily.nl/"
+        }, 5000)
     }
 
 
