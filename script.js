@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             stylesheet.href = "mobile.css";
             stylesheet.addEventListener('load', function () {
                 fadeOut(loadingDiv);
+                clearLoadingArtefacts();
             })
         } else {
             var stylesheet = document.createElement("link");
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             stylesheet.href = "style.css";
             stylesheet.addEventListener('load', function () {
                 fadeOut(loadingDiv);
+                clearLoadingArtefacts();
             })
         }
     }
