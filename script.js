@@ -156,13 +156,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 newPostContent.className = "content";
                 newPost.appendChild(newPostContent);
                 newPostContent.innerHTML = "Loading...";
-                newPostTitle.innerHTML = postContent.title;
-                newPostData.innerHTML = "<a href=\"\" onclick=\"event.preventDefault();\" id=\""+i+"-"+index+"-ulink-" + postContent.author + "\">" + postContent.author + "</a>" + " - <a href=\"\" onclick=\"event.preventDefault();\" id=\""+i+"-"+index+"-clink-" + postContent.community + "\">r/" + postContent.community + "</a>";
-                newPostContent.innerHTML = postContent.content;
-                document.getElementById(+i+"-"+index+"-clink-" + postContent.community).addEventListener('click', function () {
+                newPostTitle.innerHTML = postContent["title"];
+                newPostData.innerHTML = "<a href=\"\" onclick=\"event.preventDefault();\" id=\""+i+"-"+index+"-ulink-" + postContent["author"] + "\">" + postContent.["author"] + "</a>" + " - <a href=\"\" onclick=\"event.preventDefault();\" id=\""+i+"-"+index+"-clink-" + postContent["community"] + "\">r/" + postContent["community"] + "</a>";
+                newPostContent.innerHTML = postContent["content"];
+                document.getElementById(+i+"-"+index+"-clink-" + postContent["community"]).addEventListener('click', function () {
                     viewCommunity(postContent.community);
                 });
-                document.getElementById(i+"-"+index+"-ulink-" + postContent.author).addEventListener('click', function () {
+                document.getElementById(i+"-"+index+"-ulink-" + postContent["author"]).addEventListener('click', function () {
                     viewUser(postContent.author);
                 }
             );
